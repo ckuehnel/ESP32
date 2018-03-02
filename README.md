@@ -5,6 +5,6 @@ This repository contain program samples using different ESP32 boards. The ESP32 
 
 The file extension reffers to the development environment:
 
-ino - Arduino
-lua - Lua
-py - Micropython
+- ino - Arduino
+- lua - Lua
+- py - Micropython
