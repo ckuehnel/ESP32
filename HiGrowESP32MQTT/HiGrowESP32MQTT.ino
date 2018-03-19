@@ -133,7 +133,7 @@ void sensorsData(char* body)
  
   Serial.print("DevideId: "); Serial.println(deviceid);
   Serial.print("Temperature: "); Serial.print(temperature); Serial.println(" *C");
-  Serial.print("Humidity: "); Serial.print(humidity); Serial.println(" * rF");
+  Serial.print("Humidity: "); Serial.print(humidity); Serial.println(" %rF");
   Serial.print("Soil: "); Serial.println(waterlevel);
   Serial.print("Light: "); Serial.println(lightlevel);
   Serial.println();
