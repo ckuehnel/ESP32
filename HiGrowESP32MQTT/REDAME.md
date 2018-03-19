@@ -12,5 +12,5 @@ I use the CloudMQTT as MQTT Broker offered by the Swedish company 84codes AB in 
    
 You have to change the file credentials.h to your conditions - WiFi and MQTT access.
 
-
+(c) Claus Kuehnel 2018-03-19 info@ckuehnel.ch
 
