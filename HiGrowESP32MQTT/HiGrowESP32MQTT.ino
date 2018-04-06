@@ -83,9 +83,8 @@ void loop() {
 
   sensorsData(body);
 
-//  esp_deep_sleep_start();    // uncomment for deep sleep
-  delay(5000);                 // used for test, comment for deep sleep 
-}
+  esp_deep_sleep_start();    // uncomment for deep sleep
+  delay(5000);                 // used for test
 
 void sensorsData(char* body)
 {
