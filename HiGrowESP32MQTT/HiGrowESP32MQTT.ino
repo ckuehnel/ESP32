@@ -50,7 +50,8 @@ int charcount=0;
 
 char deviceid[21];
 
-void setup() {
+void setup() 
+{
   dht.begin();
   
   Serial.begin(115200);
@@ -71,8 +72,8 @@ void setup() {
   configureMQTT();
 }
 
-void loop() {
-  
+void loop() 
+{
   char body[1024];
   digitalWrite(16, LOW); //switched on
 
@@ -82,13 +83,13 @@ void loop() {
   }
 
   sensorsData(body);
-
-  esp_deep_sleep_start();    // uncomment for deep sleep
-  delay(5000);                 // used for test
+  delay(500);
+  Serial.println("Going to Deep Sleep..."); esp_deep_sleep_start();    // uncomment for deep sleep
+  delay(5000);               // used for test
+}
 
 void sensorsData(char* body)
 {
-
   //This section reads all sensors
   
   int waterlevel = analogRead(soilpin);
