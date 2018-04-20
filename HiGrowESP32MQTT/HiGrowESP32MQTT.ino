@@ -17,7 +17,8 @@
 //#define DHTTYPE DHT22   // DHT 22  (AM2302), AM2321
 #define uS_TO_S_FACTOR 1000000
 
-int DEEPSLEEP_SECONDS = 1800; // 30 min
+//int DEEPSLEEP_SECONDS = 1800; // 30 min
+int DEEPSLEEP_SECONDS = 180; // 3 min
 
 /* create an instance of PubSubClient client */
 WiFiClient espClient;
@@ -84,6 +85,7 @@ void loop()
 
   sensorsData(body);
   delay(500);
+  WiFi.disconnect(true);
   Serial.println("Going to Deep Sleep..."); esp_deep_sleep_start();    // uncomment for deep sleep
   delay(5000);               // used for test
 }
@@ -136,6 +138,5 @@ void sensorsData(char* body)
   Serial.print("Humidity: "); Serial.print(humidity); Serial.println(" %rF");
   Serial.print("Soil: "); Serial.println(waterlevel);
   Serial.print("Light: "); Serial.println(lightlevel);
-  Serial.println();
 }
 
