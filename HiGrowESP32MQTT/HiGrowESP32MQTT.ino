@@ -12,14 +12,6 @@
 #include "DHT.h"
 #include "credentials.h"
 
-#define DHTTYPE DHT11   // DHT 11
-//#define DHTTYPE DHT21   // DHT 21 (AM2301)
-//#define DHTTYPE DHT22   // DHT 22  (AM2302), AM2321
-#define uS_TO_S_FACTOR 1000000
-
-//int DEEPSLEEP_SECONDS = 1800; // 30 min
-int DEEPSLEEP_SECONDS = 180; // 3 min
-
 /* create an instance of PubSubClient client */
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -38,12 +30,6 @@ DHT dht(dhtpin, DHTTYPE);
 static char celsiusTemp[7];
 static char humidityTemp[7];
 char msg[20];
-
-/* topics */
-#define TEMP_TOPIC    "HiGrow/temp"
-#define HUMI_TOPIC    "HiGrow/humi"
-#define SOIL_TOPIC    "HiGrow/soil"
-#define LIGHT_TOPIC   "HiGrow/light"
 
 // Client variables 
 char linebuf[80];
