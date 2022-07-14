@@ -14,3 +14,4 @@ You have to change the file credentials.h to your conditions - WiFi and MQTT acc
 
 (c) Claus Kuehnel 2018-03-19 info@ckuehnel.ch
 
+2022-07-14: Successful compilation with Arduino IDE 2.0 RC8 documented by screenshot.
